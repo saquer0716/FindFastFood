@@ -6,19 +6,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ActivityMain" >
+    tools:context=".ActivitySearchresult" >
 
-    <GridView
-        android:id="@+id/main_gridview_restaurant"
+    <ListView
+        android:id="@+id/search_result_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:numColumns="2" 
-        android:columnWidth="120dp"
-        android:gravity="center"
-        android:stretchMode="spacingWidthUniform"
-        android:verticalSpacing="20dp"
-        android:listSelector="@android:color/transparent">
-    </GridView>
+        android:layout_height="match_parent">
+    </ListView>
 	
 </RelativeLayout>

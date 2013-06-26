@@ -1,20 +1,103 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.styled" parent="@style/Theme.Sherlock">
+        <item name="actionBarStyle">@style/styled_solid_ActionBar</item>
+        <item name="android:actionBarStyle">@style/styled_solid_ActionBar</item>
+        
+        <!-- for preferenceActivity -->
+        <!--  
+        <item name="android:listSeparatorTextViewStyle">@style/styled_PreferenceListHeader</item> 
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
         -->
     </style>
+    
+    <style name="styled_solid_ActionBar" parent="@style/Widget.Sherlock.ActionBar.Solid">
+        <!--  
+        <item name="background">@drawable/actionbar_black_bg</item>
+        <item name="backgroundStacked">@drawable/actionbar_black_bg</item>
+        <item name="backgroundSplit">@drawable/actionbar_black_bg</item>
+        -->
+        <!-- showHome|useLogo|showCustom -->
+        <item name="displayOptions">showCustom</item>
+		<item name="customNavigationLayout">@layout/layout_actionbar</item>
 
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+		<!--  
+        <item name="android:background">@drawable/actionbar_black_bg</item>
+        <item name="android:backgroundStacked">@drawable/actionbar_black_bg</item>
+        <item name="android:backgroundSplit">@drawable/actionbar_black_bg</item>
+        -->
+        <item name="android:displayOptions">showCustom</item>  
+		<item name="android:customNavigationLayout">@layout/layout_actionbar</item>
+    </style>
+
+    
+    <style name="styled_PreferenceListHeader">
+        <item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:textSize">14dip</item>
+	    <item name="android:background">@color/hardware_header_bg</item>
+	    <item name="android:paddingTop">3dip</item>
+	    <item name="android:paddingBottom">3dip</item>
+	    <item name="android:paddingLeft">5dip</item>
+	    <item name="android:gravity">center_vertical</item>
+	</style>
+    
+    <style name="shadowStyle">
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <style name="styled_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="styled_dialog_dropmenu" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@style/styled_dropmenu_animation</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="styled_dropmenu_animation">
+        <item name="android:windowEnterAnimation">@anim/dropmenu_show</item>
+        <!--  
+        <item name="android:windowExitAnimation">@anim/dropmenu_dismiss</item>-->
     </style>
 
 </resources>
